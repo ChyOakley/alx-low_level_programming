@@ -2,7 +2,7 @@
 
 /**
  * main - print _putchar
- * is written by Chyoakley
+ * is written by chyoakley
  * Return: 0
  */
 
