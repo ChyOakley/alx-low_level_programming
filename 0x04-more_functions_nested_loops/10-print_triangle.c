@@ -1,19 +1,31 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
- * _isdigit - check description
- * Description: checks for a digit
- * @c:input
- * Return: 1 if c is a digit otherwise 0
+ * print_triangle - check description
+ * Description: prints a triangle
+ * @size:input
+ * Return: 0
  */
 
-int _isdigit(int c)
+void print_triangle(int size)
 {
-if (c >= 48 && c <= 57)
-{
-return (1);
-}
+int a, b;
 
-return (0);
+if (size > 0)
+{
+for (a = 1; a <= size; a++)
+{
+for ((b = size - a); b > 0; b--)
+_putchar(' ');
+
+for (b = 0; b < a; b++)
+_putchar('#');
+
+if (a == size)
+continue;
+
+_putchar('\n');
+}
+}
+_putchar('\n');
 }
