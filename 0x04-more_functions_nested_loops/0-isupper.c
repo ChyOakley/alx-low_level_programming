@@ -21,7 +21,4 @@ return (0);
 }
 _putchar('\n');
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
 
