@@ -1,17 +1,17 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * print_numbers - prints numbers
- * followed by new line
+ * mul - check description
+ * Description: multiplies two integers
+ * @a:input
+ * @b:input
+ * Return: 0
  */
 
-void print_numbers(void)
+int mul(int a, int b)
 {
-int i;
-for (i = 0; i < 10 ; i++)
-{
-_putchar(i + '0');
-}
-_putchar('\n');
+int mul;
+mul = a * b;
+return (mul);
 }
