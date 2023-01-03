@@ -27,3 +27,7 @@ break;
 else if ((accept[m + 1]) == '\0')
 return (n);
 }
+s++;
+}
+return (n);
+}
