@@ -1,25 +1,29 @@
 #include "main.h"
 
 /**
- * prime_number - check description
- * Description: function that reurns 1
- * @i: integer
- * @m: input
- * Return:0
+ * check - checks to see if number is prime
+ * @a:int
+ * @b:int
+ * Return:int
  */
+int check(int a, int b)
+{
+	if (b < 2 || b % a == 0)
+		return (0);
+	else if (a > b / 2)
+		return (1);
+	else
+		return (check(a + 1, b));
+}
 
-int prime_number(int i, int m)
+/**
+ * is_prime_number - states if number is prime
+ * @n:int
+ * Return:int
+ */
+int is_prime_number(int n)
 {
-if (m < 2 || m % i == 0)
-{
-return (0);
-}
-else if (i > m / 2)
-{
-return (1);
-}
-else
-{
-return (prime_number(i + 1, m));
-}
+	if (n == 2)
+		return (1);
+	return (check(2, n));
 }
