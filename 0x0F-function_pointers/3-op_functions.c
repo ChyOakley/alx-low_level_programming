@@ -1,63 +1,72 @@
-#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-* op_add - Returns sum of a and b
-* @a:number 1
-* @b:number 2
-* Return: sum
-*/
+ * op_add - addition
+ * @a: sumnd 1
+ * @b: sumnd 2
+ * Return: rsult
+ */
 
 int op_add(int a, int b)
 {
-return (a + b);
+	return (a + b);
 }
 
 /**
-* op_sub- returns the difference of a and b
-* @a:number 1
-* @b:number 2
-* Return: difference
-*/
+ * op_sub - subtraction
+ * @a: minuend
+ * @b: sustrnd
+ * Return: result
+ */
 
 int op_sub(int a, int b)
 {
-return (a - b);
+	return (a - b);
 }
 
 /**
-* op_mul - returns the product of a and b
-* @a:number1
-* @b:number2
-* Return:multiplication
-*/
+ * op_mul - multiplication
+ * @a: multp 1
+ * @b: multp 2
+ * Return: result
+ */
 
 int op_mul(int a, int b)
 {
-return (a * b);
+	return (a * b);
 }
 
 /**
-* op_div - returns the result of the dividion of a and b
-* @a:number1
-* @b:number2
-* Return:division
-*/
+ * op_div - division
+ * @a: divisr
+ * @b: dividndo
+ * Return: reult
+ */
 
 int op_div(int a, int b)
 {
-return (a / b);
+	if (b)
+	{
+		return (a / b);
+	}
+	printf("Error\n");
+	exit(100);
 }
 
 /**
-* op_mod - returns the remainder of the division of a and b
-* @a:number1
-* @b:number2
-* Return:remainder of division
-*/
+ * op_mod - modulo
+ * @a: vaper 1
+ * @b: vaper 2
+ * Return: result
+ */
 
 int op_mod(int a, int b)
 {
-return (a % b);
+	if (b)
+	{
+		return (a % b);
+	}
+	printf("Error\n");
+	exit(100);
 }

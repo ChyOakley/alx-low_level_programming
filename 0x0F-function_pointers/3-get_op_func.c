@@ -1,17 +1,18 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 /**
-* get_op_func - check description
-* Description: Selects the correct function to perform the op
-* @s:op
-* Return: a pointer to the function
+*get_op_func - selects the correct function to perform
+*the operation asked by the user. You’re not allowed
+*to declare any other function.
+*@s: operator passed as argument
+*
+*Return: A pointer to the function corresponding to
+*the operator given in parameter
 */
-
 int (*get_op_func(char *s))(int, int)
 {
+
 op_t ops[] = {
 {"+", op_add},
 {"-", op_sub},
@@ -22,15 +23,9 @@ op_t ops[] = {
 };
 int i = 0;
 
-while (i < 5)
-{
-if (!strcmp(ops[i].op, s))
-{
-return (ops[i].f);
-}
+while (ops[i].op != NULL && *(ops[i].op) != *s)
 i++;
-}
 
-return (NULL);
+return (ops[i].f);
 
 }
